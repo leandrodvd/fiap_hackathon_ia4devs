@@ -1,0 +1,9 @@
+# Path to the datasets
+path: .  # datasets root dir
+train: images/train  # train images (relative to 'path') 4000 images
+val: images/test  # val images (relative to 'path') 156 images
+
+# Classes
+names:
+  0: Knife
+  1: Handgun
