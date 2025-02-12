@@ -1,6 +1,6 @@
 ultralytics
 opencv-python
-numpy
+numpy<2
 torch
 torchvision
 tqdm

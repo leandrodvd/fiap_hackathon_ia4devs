@@ -26,14 +26,14 @@ parser = argparse.ArgumentParser(description="Detect weapons in a video and send
 parser.add_argument("video_path", type=str, help="Path to the input video file.")
 parser.add_argument("mail_gun_api_key", type=str, help="api key for mail gun service")
 parser.add_argument("mail_gun_domain", type=str, help="domain for mail gun service")
-parser.add_argument("notification_email", type=str, help="demaili to receive notifications")
+parser.add_argument("notification_email", type=str, help="email to receive notifications")
 args = parser.parse_args()
 
 mail_gun_api_key = args.mail_gun_api_key
 mail_gun_domain = args.mail_gun_domain
 notification_email = args.notification_email
 
-send_alert(mail_gun_api_key, mail_gun_domain, notification_email)
+
 # Load the trained YOLOv8 model
 model = YOLO("runs/detect/train/weights/best.pt")  # Adjust path if needed
 
@@ -87,4 +87,4 @@ out.release()
 cv2.destroyAllWindows()
 
 if(weapon_detected):
-    send_alert()
+    send_alert(mail_gun_api_key, mail_gun_domain, notification_email)

@@ -30,9 +30,9 @@ O modelo treinado está disponível no arquivo `runs/detect/train/weights/best.p
 Para executar a detecção de objetos em um video execute
 
 ```python
-python analyze.py <caminho parar o arquivo de video.mp4>
+python analyze.py <caminho parar o arquivo de video.mp4> <mailgun api key> <mailgun domain> <email alert destination>
 ```
 exemplo:
 ```python
-python analyze.py test-video1.mp4
+python analyze.py test-video1.mp4 XXXYYYY xxxyyy@mailgun.cc destination@gmail.com
 ```
